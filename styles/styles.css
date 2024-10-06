@@ -1106,3 +1106,109 @@ letter-spacing: 1px;
 
 
 
+
+
+
+/* profiel pagina style */
+
+.about-section h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin: 20px 0;
+    color: #444;
+    font-weight: bold;
+}
+
+/* About Section */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px; 
+    background-color: #fff;
+    margin-bottom: 60px; 
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.author-img-container {
+    width: 45%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    background-color: #162052;
+    background: linear-gradient(135deg, #333, #F59A84, #000, #E15746);
+    background-size: 300% 300%;
+    animation: color-shift 10s ease infinite;
+    margin-bottom: 30px; 
+}
+
+@keyframes color-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.author-img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.author-img:hover {
+    transform: scale(1.1);
+}
+
+/* Social Media Links */
+.about-social-links-container {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.about-social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.about-social-links li a {
+    text-decoration: none;
+    color: #555; 
+    background-color: #f2f2f2; 
+    font-size: 1.4rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 10px 20px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    display: inline-block;
+}
+
+.about-social-links li a:hover {
+    color: #fff;
+    background-color: #D64938; 
+    border-color: #D64938;
+}
+
+/* Text Section */
+.text-container {
+    max-width: 800px;
+    color: #333; 
+    line-height: 1.8;
+    font-size: 1.2rem;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+
