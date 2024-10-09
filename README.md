@@ -14,15 +14,70 @@ De instructie van deze leertaak staan in de [INSTRUCTIONS](https://github.com/fd
   * [Licentie](#licentie)
 
 ## Beschrijving
-<!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
+Dit project geeft de Redpers-website een fris en modern ontwerp. De belangrijkste verbeteringen zijn gericht op het verbeteren van de navigatie, het toevoegen van interactieve elementen en het toepassen van nieuwe kleuren en animaties.
+
+Navigatie: Een dropdown-menu met een overlay voor betere toegankelijkheid.
+Donatie Pop-up: Verschijnt automatisch wanneer je meer dan 50% van de pagina hebt gescrold.
+Leesvoortgang: Een voortgangsbalk laat zien hoeveel van het artikel je hebt gelezen.
+View-counter: Houdt bij hoe vaak een artikel is gelezen en slaat dit op in localStorage.
+Animaties: Levendige animaties voor een dynamischere gebruikerservaring, zoals hover-effecten en bewegende iconen.
+Kleuren: Er is een breder kleurenpalet toegepast om de pagina’s visueel aantrekkelijker te maken.
 
 ## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
+HTML:
+
+Semantische HTML-elementen zoals <header>, <section>, en <footer> om een duidelijke structuur te behouden.
+Toevoeging van aria-attributen om de toegankelijkheid te verbeteren.
+
+CSS:
+
+Gebruik van Flexbox voor lay-out.
+Animaties en transitions voor hover-effecten en visuele feedback (bijv. menu-transformaties, donatieknop).
+Een modern en fris kleurenschema met goed leesbare typografie.
+
+JavaScript:
+
+Menu-functionaliteit (openen en sluiten van het dropdown-menu).
+Donatie-pop-up die automatisch verschijnt na 50% scrollen.
+Voortgangsbalk die de leesvoortgang van een artikel toont.
+View-counter met localStorage om te onthouden hoeveel keer een artikel is gelezen.
+
+
+
+## Bronnen
+- [Carrière maken als Amsterdamse polaroidfotograaf: ‘Soms is het een strijd om de nacht’](https://redpers.nl/2024/02/20/carriere-maken-als-amsterdamse-polaroidfotograaf-soms-is-het-een-strijd-om-de-nacht/)
+
+
+Voorbeelden van de oude versie van de website
+Hieronder zie je screenshots van hoe de Redpers-website eruitzag vóór de aanpassingen:
+
+Oude Navigatie
+De oude navigatie zonder verbeteringen zoals de overlay en dropdown-functionaliteit.
+![Oude navigatie](assets/old-navigation.png)
+
+
+Oude Footer
+De oude footer met een eenvoudiger kleurenschema en minder visuele elementen.
+
+![Oude Footer](assets/old-footer.png)
+
+Oude Donatiepagina
+De oude donatie-sectie stond in de artikelpagina en had geen automatische pop-up bij scrollen.
+![Oude donatie section](assets/old-donation.png)
+
+
+De oude auteurspagina stond direct in de artikelpagina en had minder structuur, zonder een doorverwijsknop naar een aparte pagina voor de auteur.
+![Oude autor section ](assets/old-author.png)
+
+
+
 
 
 
 ## Licentie
 
 This project is licensed under the terms of the [MIT license](./LICENSE).
+
+
+
+

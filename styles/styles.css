@@ -1,729 +1,702 @@
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Algemene body stijl */
 body {
-margin: 0;
-display: flex;
-flex-direction: column;
-font-family: 'Arial', sans-serif;
-background-color: #f4f4f4; 
-line-height: 1.7; 
-}
-
-h2, h3 {
-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
-border-bottom: 2px solid #e15746; 
-padding-bottom: 0.5rem;
-margin-bottom: 1.5rem;
-font-size: 1.75rem; 
-}
-
-
-/* Witruimte rond secties */
-main, .article-content, .img-container {
-padding: 3rem; 
-}
-
-/* Notificatie en zoekveld styling */
-.notification-container {
-display: flex;
-align-items: center;
-}
-
-.newsletter {
-display: flex;
-align-items: center;
-margin-right: 1.25rem;
-color: white;
-}
-
-/* Zoekveld styling */
-.search-container input {
-padding: 0.375rem 0.625rem;
-border: 1px solid #ccc;
-border-radius: 0.25rem;
-width: 10rem;
-height: 1.25rem;
-background-color: #ffffff;
-box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
-outline: none;
-transition: width 0.3s ease, box-shadow 0.3s ease;
-}
-
-
-
-/* Zoekicoon styling */
-.search-container .search-icon {
-font-size: 1.25rem;
-margin-right: 0.625rem;
-color: #E15746; 
-cursor: pointer;
-transition: transform 0.3s ease, color 0.3s ease;
-}
-
-
-/* Hover-effect met meer contrast */
-.search-container input:focus {
-width: 12.5rem;
-box-shadow: 0 0.1875rem 0.625rem rgba(0, 0, 0, 0.2); 
-border-color: #E15746; 
-}
-
-/* Secundaire navigatiebalk stijlen */
-.secondary-item a:hover {
-color: #E15746; 
-background-color: transparent; 
-box-shadow: none; 
-border: none; 
-}
-/* Bel icoon styling */
-.bell {
-font-size: 1.5rem;
-margin-right: 0.3125rem;
-animation: shake 1.9s infinite alternate;
-color: #E15746;
-}
-
-/* Animatie voor bel icoon */
-@keyframes shake {
-0% { transform: translate(0); }
-100% { transform: translate(-0.3125rem); }
-}
-
-/* Logo container stijl */
-.logo-container {
-text-align: center;
-padding: 1.5rem 0;
-background-color: #f4f4f4;
-}
-
-.logo {
-width: 12.5rem;
-height: auto;
-}
-
-/* Secundaire navigatiebalk stijlen */
-.secondary-navbar {
-padding: 0.625rem 0;
-box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
-}
-
-.secondary-nav-list {
-display: flex;
-justify-content: center;
-list-style-type: none;
-padding: 0;
-margin: 0;
-}
-
-.secondary-item {
-padding: 0.625rem 0.9375rem;
-transition: transform 0.2s;
-}
-
-/* hover-effecten en kleurverandering voor de secundaire navigatiebalk */
-.secondary-item a {
-text-decoration: none;
-color: #333;
-transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
-padding: 0.5rem;
-border-radius: 0.25rem;
-}
-
-
-.secondary-separator {
-height: 1.25rem;
-width: 0.0625rem;
-background-color: rgb(187, 176, 176);
-margin: 0 0.625rem;
-margin-top: 0.625rem ;
-}
-
-/* Stijl van de hoofd navbar */
-.navbar {
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 0.625rem 1.25rem;
-background-color: #141415;
-}
-
-/* Menu-knop stijl */
-.menu-button {
-cursor: pointer;
-background: none;
-border: none;
-font-size: 1.5rem;
-color: #CCCCCC	;
-transition: transform 0.3s ease;
-}
-
-.menu-button:hover {
-transform: rotate(90deg);
-}
-
-/* Overlay en dropdown-styling */
-.overlay {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-display: none;
-background-color: rgba(12, 8, 8, 0.7);
-z-index: 1000;
-opacity: 0;
-transition: opacity 0.4s ease;
-}
-
-.overlay.show {
-display: block;
-opacity: 1;
-}
-
-/* Dropdown sectie */
-.dropdown {
-position: fixed;
-top: 0;
-left: 0;
-width: 15.625rem;
-height: 100%;
-background-color: #141415;
-box-shadow: 0.125rem 0 0.625rem rgba(0, 0, 0, 0.5);
-padding: 1.25rem;
-transform: translateX(-100%);
-opacity: 0;
-transition: transform 0.3s ease-out, opacity 0.3s ease-out; 
-display: flex;
-flex-direction: column;
-}
-
-/* Animatie bij het tonen van de dropdown */
-.dropdown.show {
-transform: translateX(0);
-opacity: 1;
-}
-
-/* Stijl voor de sluitknop */
-.close-button {
-align-self: flex-end;
-cursor: pointer;
-background: none;
-border: none;
-font-size: 1.5rem;
-color: #ffffff;
-}
-
-/* Nav-lijst en items */
-.nav-list {
-list-style: none;
-padding: 0;
-margin: 1.25rem 0 0 0;
-display: flex;
-flex-direction: column;
-}
-
-.item {
-padding: 0.9375rem 0.625rem;
-transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-/* Link styling met  3D hover effect */
-.item a {
-color: #ffffff;
-text-decoration: none;
-font-size: 1rem;
-display: block;
-transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/*  3D Hover effect op de item links */
-.item a:hover {
-transform: perspective(300px) rotateX(15deg) rotateY(-15deg) scale(1.1);
-box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.5);
-}
-
-/* Stijl van de separator */
-.separator {
-height: 0.0625rem;
-background-color: #3d3a3a;
-margin: 0.625rem 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif; 
+    background-color: #f4f4f4; 
+    line-height: 1.7; 
 }
 
 
 /* Stijl voor de main container om content te centreren */
 main {
-display: flex;
-justify-content: center;
-align-items: center;
-min-height: 80vh;
-padding: 5rem 3rem;
-background-color: #f8f8f8; 
-box-sizing: border-box;
-border-bottom: 1px solid #ddd; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 5rem 3rem;
+    background-color: #f8f8f8; 
+    box-sizing: border-box;
+    border-bottom: 1px solid #ddd; 
 }
 
+
+h2, h3 {
+    font-family: 'Merriweather', serif; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
+    border-bottom: 2px solid #e15746; 
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem; 
+}
+
+/* Witruimte rond secties */
+main, .article-content, .img-container {
+    padding: 3rem; 
+}
+
+/* Notificatie en zoekveld styling */
+.notification-container {
+    display: flex;
+    align-items: center;
+}
+
+.newsletter {
+    display: flex;
+    align-items: center;
+    margin-right: 1.25rem;
+    color: white;
+}
+
+/* Zoekveld styling */
+.search-container input {
+    padding: 0.375rem 0.625rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    width: 10rem;
+    height: 1.25rem;
+    background-color: #ffffff;
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: width 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Zoekicoon styling */
+.search-container .search-icon {
+    font-size: 1.25rem;
+    margin-right: 0.625rem;
+    color: #E15746; 
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover-effect met meer contrast */
+.search-container input:focus {
+    width: 12.5rem;
+    box-shadow: 0 0.1875rem 0.625rem rgba(0, 0, 0, 0.2); 
+    border-color: #E15746; 
+}
+
+/* Secundaire navigatiebalk stijlen */
+.secondary-item a:hover {
+    color: #E15746; 
+    background-color: transparent; 
+    box-shadow: none; 
+    border: none; 
+}
+
+/* Bel icoon styling */
+.bell {
+    font-size: 1.5rem;
+    margin-right: 0.3125rem;
+    animation: shake 1.9s infinite alternate;
+    color: #E15746;
+}
+
+/* Animatie voor bel icoon */
+@keyframes shake {
+    0% { transform: translate(0); }
+    100% { transform: translate(-0.3125rem); }
+}
+
+/* Logo container stijl */
+.logo-container {
+    text-align: center;
+    padding: 1.5rem 0;
+    background-color: #f4f4f4;
+}
+
+.logo {
+    width: 12.5rem;
+    height: auto;
+}
+
+/* Secundaire navigatiebalk stijlen */
+.secondary-navbar {
+    padding: 0.625rem 0;
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+}
+
+.secondary-nav-list {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.secondary-item {
+    padding: 0.625rem 0.9375rem;
+    transition: transform 0.2s;
+}
+
+/* Hover-effecten en kleurverandering voor de secundaire navigatiebalk */
+.secondary-item a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.secondary-separator {
+    height: 1.25rem;
+    width: 0.0625rem;
+    background-color: rgb(187, 176, 176);
+    margin: 0 0.625rem;
+    margin-top: 0.625rem ;
+}
+
+/* Stijl van de hoofd navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.625rem 1.25rem;
+    background-color: #141415;
+}
+
+/* Menu-knop stijl */
+.menu-button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #CCCCCC	;
+    transition: transform 0.3s ease;
+}
+
+.menu-button:hover {
+    transform: rotate(90deg);
+}
+
+/* Overlay en dropdown-styling */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none; 
+    background-color: rgba(12, 8, 8, 0.7);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.overlay.show {
+    display: block;
+    opacity: 1;
+}
+
+/* Dropdown sectie */
+.dropdown {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15.625rem;
+    height: 100%;
+    background-color: #141415;
+    box-shadow: 0.125rem 0 0.625rem rgba(0, 0, 0, 0.5);
+    padding: 1.25rem;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out; 
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Stijl voor de sluitknop */
+.close-button {
+    align-self: flex-end;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+/* Nav-lijst en items */
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.25rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    padding: 0.9375rem 0.625rem;
+}
+    
+    /* Link styling met  3D hover effect */
+    .item a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    /*  3D Hover effect op de item links */
+    .item a:hover {
+    transform: perspective(300px) rotateX(15deg) rotateY(-15deg) scale(1.1);
+    box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.5);
+    }
+    
+    /* Stijl van de separator */
+    .separator {
+    height: 0.0625rem;
+    background-color: #3d3a3a;
+    margin: 0.625rem 0;
+    }
 
 
 
 /* Kaarten en afbeelding styling */
 .card {
-max-width: 40rem;
-border-radius: 0.5rem;
-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); 
-background-color: #f4f4f4; 
-margin: 2rem 0;
+    max-width: 40rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); 
+    background-color: #f4f4f4; 
+    margin: 2rem 0;
 }
 
 .card-img {
-width: 100%;
-height: auto;
-object-fit: cover;
-border: 1px solid #ddd; 
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 1px solid #ddd; 
 }
 
 .card:hover {
-transform: translateY(-0.5rem);
-box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.2);
 }
 
 
 
 .card-body {
-padding: 1.5rem;
-background-color: #ffffff;
-text-align: left;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    text-align: left;
 }
 
 
 /* Flex-container om de categorie en leestijd naast elkaar te zetten */
 .card-header {
-display: flex;
-align-items: center;
-justify-content: space-between;
-margin-bottom: 10px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px; 
 }
 
 /* Stijl voor de categorie */
 .card-category {
-display: block;
-font-size: 0.875rem;
-color: #444444; 
-font-weight: bold;
-flex: 1; 
-max-width: 150px; 
-text-align: left; 
+    display: block;
+    font-size: 0.875rem;
+    color: #444444; 
+    font-weight: bold;
+    flex: 1; 
+    max-width: 150px; 
+    text-align: left; 
 }
 
 /* Flex container voor afbeelding en info in één rij */
 .author-profile {
-display: flex;
-align-items: center;
-gap: 1rem; 
-margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem; 
+    margin-top: 1.5rem;
 }
 
 /* Cirkelvormige container voor de afbeelding met animatie */
 .box {
-position: relative;
-width: 80px; 
-height: 80px;
-border-radius: 50%;
-display: flex;
-justify-content: center;
-align-items: center;
-overflow: visible; 
-z-index: 2;
+    position: relative;
+    width: 80px; 
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible; 
+    z-index: 2;
 }
-
 
 .box::before {
-content: '';
-position: absolute;
-top: -5px;
-left: -5px;
-right: -5px;
-bottom: -5px;
-border-radius: 50%;
-border: 2px solid transparent;
-background: conic-gradient(from 90deg, #eaebf3 10%, #52595b 15%, #E15746 50%, #b46875 55%, #162052 90%);
-z-index: 1;
-animation: rotate 4s linear infinite;
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background: conic-gradient(from 90deg, #eaebf3 10%, #52595b 15%, #E15746 50%, #b46875 55%, #162052 90%);
+    z-index: 1;
+    animation: rotate 4s linear infinite;
 }
-
 .box::after {
-content: '';
-position: absolute;
-top: -3px;
-left: -3px;
-right: -3px;
-bottom: -3px;
-border-radius: 50%;
-border: 1px solid transparent;
-background: conic-gradient(from 270deg,  #292727 80%, #fff 85%, #333 95%);
-z-index: 2;
-animation: rotate 6s linear infinite reverse;
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background: conic-gradient(from 270deg,  #292727 80%, #fff 85%, #333 95%);
+    z-index: 2;
+    animation: rotate 6s linear infinite reverse;
 }
-
 
 @keyframes rotate {
-0% {
-transform: rotate(0deg);
-}
-100% {
-transform: rotate(360deg);
-}
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
-/* Inhoud van de cirkel (afbeelding) */
+/* Inhoud van de cirkel */
 .content {
-position: relative;
-width: 100%;
-height: 100%;
-border-radius: 50%;
-display: flex;
-justify-content: center;
-align-items: center;
-z-index: 3;
-transition: 0.5s;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    transition: 0.5s;
 }
 
 .content img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-border-radius: 50%;
-transition: opacity 0.5s;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: opacity 0.5s;
+    z-index: 4; 
 }
+
+
 
 /* Naam en button naast de afbeelding */
 .author-info {
-display: flex;
-flex-direction: column;
-justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .author-name {
-font-size: 1.2rem;
-font-weight: bold;
-color: #333;
-margin: 0;
-margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    margin-bottom: 0.5rem;
 }
 
 .profile-link {
-background-color: #F28A71;
-color: white;
-padding: 0.4rem 0.8rem;
-border-radius: 20px;
-text-decoration: none;
-font-size: 0.85rem;
-transition: background-color 0.3s ease;
+    background-color: #F28A71;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: background-color 2.9s ease-in-out;
 }
 
 .profile-link:hover {
-background-color: #F59A84;
+    background-color: #F59A84;
 }
-
-
-/* Hover-effecten */
-.box:hover .content img {
-opacity: 0;
-}
-
 
 
 
 /* Stijl voor de leestijd */
 .read-time {
-display: inline-flex;
-align-items: center;
-color: #333;
-padding: 5px 10px;
-border-radius: 20px;
-font-size: 14px;
-font-weight: 500;
-flex: 1; 
-max-width: 100px; 
-justify-content: flex-end; 
+    display: inline-flex;
+    align-items: center;  
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap; 
 }
 
 .read-time i {
-margin-right: 5px;
+    margin-right: 5px;
+    font-size: 14px; 
 }
-
-
 
 
 
 .card-title {
-font-size: 1.5rem;
-font-weight: bold;
-margin-bottom: 0.5rem;
-color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-family: 'Merriweather', serif; 
+
 }
 
 .card-text {
-font-size: 1rem;
-color: #555;
-line-height: 1.6;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    font-family: 'Source Serif Pro', serif; 
+
 }
 
 
 
 .subheadline {
-font-size: 0.870rem;
-color: #333;
+    font-size: 0.870rem;
+    color: #333;
 }
 .article-content {
-width: 700px;
-margin: 0 auto;
-padding: clamp(0.875rem, 2vw, 1rem);
-background-color: #ffffff;
-border: 1px solid #ddd;
-border-radius: 8px;
-min-height: 80vh; 
+    width: 700px;
+    margin: 0 auto;
+    padding: clamp(0.875rem, 2vw, 1rem);
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    min-height: 80vh; 
 }
 
 
 
 .section-divider {
-border: 0;
-height: 1px;
-background: #fcfafa;
-margin: 20px 0;
+    border: 0;
+    height: 1px;
+    background: #fcfafa;
+    margin: 20px 0;
 }
 
 p {
-font-size: clamp(1rem, 1.2vw, 1.25rem);
-line-height: 1.6;
-max-width: 70ch; /* Limiteert de breedte van de tekst tot ongeveer 70 tekens per regel */
+    font-size: clamp(1rem, 1.2vw, 1.25rem);
+    line-height: 1.6;
+    max-width: 70ch;
+    font-family: 'Source Serif Pro';
+
 
 }
 
 /* Subtiel hover-effect op tekst */
 p:hover {
-transform: scale(1.02); 
-transition: transform 0.2s ease-in-out; 
+    transform: scale(1.01); 
+    transition: transform 0.8s ease-in-out; 
 }
+
+
+
 
 
 
 h2 {
-font-size: 1.25rem;
-font-weight: bold;
-color: #333;
-margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
 }
-
-
-
 
 
 .styled-quote {
-position: relative;
-text-align: center; 
-font-size: clamp(1rem, 2vw, 1.5rem); 
-font-weight: bold;
-color: #333;
-margin: 2rem 0;
-padding: 1rem;
-border-left: 5px solid #e74c3c;
-background-color: #f9f9f9;
+    position: relative;
+    text-align: center; 
+    font-size: clamp(1rem, 2vw, 1.5rem); 
+    font-weight: bold;
+    color: #333;
+    margin: 2rem 0;
+    padding: 1rem;
+    border-left: 5px solid #e74c3c;
+    background-color: #f9f9f9;
 }
 
 .styled-quote .quote-mark {
-position: absolute;
-top: -0.5rem;
-left: 10px;
-font-size: 3rem;
-color: #e74c3c;
-font-family: 'Georgia', serif;
+    position: absolute;
+    top: -0.5rem;
+    left: 10px;
+    font-size: 3rem;
+    color: #e74c3c;
+    font-family: 'Georgia', serif;
 }
 
 .camera-icon {
-position: absolute;
-right: 30px;
-bottom: 80px;
-font-size: 24px;
-color: #e74c3c;
-animation: flash 2s infinite;
+    position: absolute;
+    right: 30px;
+    bottom: 80px;
+    font-size: 24px;
+    color: #e74c3c;
+    animation: flash 2s infinite;
 }
 
 @keyframes flash {
-0%, 100% {
-opacity: 1;
-}
-50% {
-opacity: 0.2;
-}
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.2;
+    }
 }
 
 
-/* Share Button Styles */
+/* Container voor de tekst en social media */
 .share-container {
-position: relative;
-display: flex;
-justify-content: center;
-margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+    margin-top: 50px;
 }
 
-.share-btn {
-border: none;
-background: #ffffff;
-color: #e15746;
-border-radius: 50%;
-width: 50px;
-height: 50px;
-font-size: 24px;
-cursor: pointer;
-transition: transform 0.3s ease;
-}
-
-.share-btn:hover {
-transform: scale(1.1);
-}
-
-.share-options {
-position: absolute;
-top: 60px;
-left: 50%;
-transform: translateX(-50%);
-width: 280px;
-background: rgba(15, 15, 15, 0.85);
-border-radius: 10px;
-padding: 15px;
-display: none;
-flex-direction: column;
-color: #ffffff;
-}
-
-.share-options.active {
-display: flex;
-}
-
+/* Stijl voor de tekst "Deel dit artikel" */
 .share-title {
-font-size: 18px;
-margin-bottom: 10px;
-text-align: center;
-border-bottom: 1px solid #ffffff;
-padding-bottom: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin: 0; 
 }
 
-.social-media {
-display: flex;
-justify-content: space-around;
-margin-bottom: 10px;
+/* Sociale media container en styling */
+.social-media-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.social-media-btn {
-width: 40px;
-height: 40px;
-border: none;
-border-radius: 50%;
-background:#F28A71;
-color: #fff;
-cursor: pointer;
-transition: background 0.3s ease;
+/* Lijststijl voor social media iconen */
+.social-icons {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
 }
 
-.social-media-btn:hover {
-background: #F59A84;
+.social-icons li {
+    position: relative;
 }
 
-.link-container {
-display: flex;
-align-items: center;
-background: #9a9696;
-border-radius:20px;
-padding: 5px 10px;
-height: 30px;
-
+.social-icon {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: #2a2a2a;
+    border-radius: 50%;
+    color: white;
+    font-size: 30px;
+    transition: background-color 0.3s ease;
+    position: relative;
+    cursor: pointer;
 }
 
-.share-link {
-flex: 1;
-color: #000;
-overflow: hidden;
-white-space: nowrap;
-text-overflow: ellipsis;
+.social-icon i {
+    font-size: 24px;
 }
 
-.copy-btn {
-border: none;
-background: #F9C1B2;
-color: #ffffff;
-padding: 5px 10px;
-border-radius: 15px;
-cursor: pointer;
+
+
+/* Kleurveranderingen voor verschillende iconen bij hover */
+.facebook:hover {
+    background-color: #e74c3c;
 }
+
+.twitter:hover {
+    background-color: #8f8c8c;
+}
+
+.instagram:hover {
+    background-color: #e15746;
+}
+
+.linkedin:hover {
+    background-color: #979797;
+}
+
+
 
 /* Stijlen voor de pop-up overlay */
 .popup-overlay {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: rgba(0, 0, 0, 0.7);
-display: none;
-align-items: center;
-justify-content: center;
-z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
 }
 
 /* Donatie Pop-up styling */
 .popup-content {
-background: #fff;
-padding: 20px;
-border-radius: 10px;
-max-width: 400px;
-text-align: center;
-position: relative;
-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); 
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); 
 }
 
 .close-popup {
-position: absolute;
-top: 10px;
-right: 10px;
-background: none;
-border: none;
-font-size: 1.5rem;
-cursor: pointer;
-color: #e15746;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #e15746;
 }
 
 
 
-.profile-link:hover {
-transform: scale(1.05);
-background-color: #D64938;
-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-transition: transform 0.3s ease, box-shadow 0.3s ease;
+ .profile-link:hover {
+    transform: scale(1.05);
+    background-color: #D64938;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 
 
 /* Stijl voor de sticky donatieknop aan de zijkant */
 .sticky-donate-btn {
-position: fixed;
-top: 50%;
-right: 20px;
-transform: translateY(-50%);
-z-index: 1000;
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 1000;
 }
 
 /* Puls-animatie voor de donatieknop */
 .donate-btn-sticky {
-background-color: #E15746;
-color: white;
-border: none;
-padding: 12px 20px;
-border-radius: 50px;
-cursor: pointer;
-font-size: 1rem;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-transition: background-color 0.3s ease, transform 0.3s ease;
+    background-color: #E15746;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 
@@ -731,388 +704,383 @@ transition: background-color 0.3s ease, transform 0.3s ease;
 
 /* Stijl voor de view-counter (aantal keer gelezen) */
 .view-counter {
-display: inline-block;
-color: #333; 
-background-color: #f4f4f4; 
-padding: 5px 15px;
-border-radius: 20px; 
-font-size: 12px; 
-font-weight: 500;
-text-align: center;
-margin-left: 10px; 
-margin-right: 0; 
+    display: inline-block;
+    color: #333; 
+    background-color: #f4f4f4; 
+    padding: 5px 15px;
+    border-radius: 20px; 
+    font-size: 12px; 
+    font-weight: 500;
+    text-align: center;
+    margin-left: 10px; 
+    margin-right: 0; 
 }
 
 
 
 /* Lees Meer container layout */
 .img-container {
-display: flex;
-justify-content: space-evenly; 
-flex-wrap: wrap; 
-gap: 30px; 
-padding: 2rem;
-max-width: 1300px; 
-margin: 0 auto;
-background-color: #f4f4f4;    border-radius: 15px; 
-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    justify-content: space-evenly; 
+    flex-wrap: wrap; 
+    gap: 30px; 
+    padding: 2rem;
+    max-width: 1300px; 
+    margin: 0 auto;
+    background-color: #fdfafa;    border-radius: 15px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
 }
 
 /* Lees meer individuele kaarten */
+/* Container voor de artikelen */
+.img-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Individuele kaarten */
 .imagecard {
-flex: 1 1 calc(30% - 20px); 
-max-width: 280px;
-background: #ffffff; 
-margin: 15px;
-padding: 0;
-display: flex;
-flex-direction: column;
-align-items: center;
-border-radius: 15px; 
-box-shadow: 0 0 25px rgba(0, 0, 0, 0.15); 
-transition: transform 0.4s ease, box-shadow 0.4s ease;
+    background-color: #333;
+    border: 1px solid #f14d4d;
+    border-radius: 8px;
+    width: 18rem;
+    margin: 20px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.9s ease;
+    overflow: hidden;
 }
 
 /* Hover effect voor dynamische vergroting */
 .imagecard:hover {
-transform: scale(1.08); 
-box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); 
+    transform: translateY(5px);
 }
 
 /* Stijl voor de afbeelding in de kaart */
 .imgbx {
-width: 100%;
-height: 200px; 
-overflow: hidden;
-border-radius: 15px 15px 0 0; 
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
 }
 
 .imgbx img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-transition: transform 0.4s ease;
-border-bottom: 3px solid #e15746; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-
-/* Subtielere schaduw en vergroting bij hover */
-.imagecard:hover {
-transform: scale(1.08); 
-box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); 
-}
-
 
 /* Titel van de kaart */
-.imagecard h2 {
-font-size: 1.2rem; 
-font-weight: bold;
-color: #333; 
-margin: 15px 0;
-text-align: center;
-padding: 0 20px; 
-line-height: 1.5;
-text-transform: uppercase; 
-letter-spacing: 1px; 
-transition: color 0.3s ease;
+.image-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #fff;
 }
 
-/* Titel hover effect */
-.imagecard:hover h2 {
-color: #e15746; 
+.meta-info {
+    font-size: 0.875rem;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    color: #ddd;
 }
 
-
-
-/* Opvallende knopstijl voor "Lees meer artikelen" */
+/* Lees meer knop stijl */
 .read-more-btn {
-display: inline-block;
-padding: 12px 25px;
-color: #161616;
-text-transform: uppercase;
-font-size: 1rem;
-font-weight: bold;
-text-decoration: none;
-margin-left: 15%;
-margin-top: 10%;
-}
+    display: inline-block;
+    padding: 12px 25px;
+    color: #161616;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 15%;
+    margin-top: 10%;
+    }
+     
+
+    .imagecard p {
+        color: #b9b4b4;
+    }
 
 
-
-
+    .img-container .imagecard h2 {
+        color: white;
+    }
+    
+    
+    
+    
 
 button, .donate-btn,  .share-btn, .social-media-btn {
-position: relative;
-display: inline-block;
-padding: 15px 20px;
-margin: 40px 0;
-text-decoration: none;
-text-transform: uppercase;
-overflow: hidden;
-letter-spacing: 4px;
-font-size: 14px;
-font-family: 'Arial', sans-serif;
-color: #fff;
-background-color: #333;
-border: none;
-cursor: pointer;
-transition: 0.5s;
+    font-family: 'Inter', sans-serif; 
+    position: relative;
+    display: inline-block;
+    padding: 15px 20px;
+    margin: 40px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: 4px;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+} 
+
+
+
+
+
+button:hover, .donate-btn:hover,  .share-btn:hover{
+    color: #e15746;
+    box-shadow: 0 0 5px #e15746; 
 }
 
-button:hover, .donate-btn:hover,  .share-btn:hover, .social-media-btn:hover {
-color: #e15746;
-box-shadow: 0 0 10px #e15746;
+button span, .donate-btn span, .share-btn span {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
 }
 
-button span, .donate-btn span, .share-btn span, .social-media-btn span {
-position: relative;
-display: inline-block;
-z-index: 1;
+button span::before, .donate-btn span::before,  .share-btn span::before,
+button span::after, .donate-btn span::after,  .share-btn span::after {
+    content: '';
+    position: absolute;
+    background: linear-gradient(90deg, transparent, #e15746);
+    animation: animate1 2s linear infinite;
+    
 }
 
-button span::before, .donate-btn span::before,  .share-btn span::before, .social-media-btn span::before,
-button span::after, .donate-btn span::after,  .share-btn span::after, .social-media-btn span::after {
-content: '';
-position: absolute;
-background: linear-gradient(90deg, transparent, #e15746);
-animation: animate1 1s linear infinite;
+button span::before, .donate-btn span::before,  .share-btn span::before {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 1px; 
+    background: linear-gradient(90deg, transparent, #e15746);
+    animation: animate1 2s linear infinite;
 }
 
-button span::before, .donate-btn span::before,  .share-btn span::before, .social-media-btn span::before {
-top: 0;
-left: -100%;
-width: 100%;
-height: 2px;
-background: linear-gradient(90deg, transparent, #e15746);
-animation: animate1 1s linear infinite;
-}
-
-button span::after, .donate-btn span::after,  .share-btn span::after, .social-media-btn span::after {
-top: -100%;
-right: 0;
-width: 2px;
-height: 100%;
-background: linear-gradient(180deg, transparent, #e15746);
-animation: animate2 2s linear infinite;
-animation-delay: 0.25s;
+button span::after, .donate-btn span::after,  .share-btn span::after {
+    top: -100%;
+    right: 0;
+    width: 1px; 
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #e15746);
+    animation: animate2 3s linear infinite; 
+    animation-delay: 0.5s; 
 }
 
 @keyframes animate1 {
-0% { left: -100%; }
-50%, 100% { left: 100%; }
+    0% { left: -100%; }
+    100% { left: 100%; }
 }
 
 @keyframes animate2 {
-0% { top: -100%; }
-50%, 100% { top: 100%; }
+    0% { top: -100%; }
+    100% { top: 100%; }
 }
 
 button::before, .donate-btn::before,  .share-btn::before, .social-media-btn::before {
-content: '';
-position: absolute;
-bottom: 0;
-right: -100%;
-width: 100%;
-height: 2px;
-background: linear-gradient(270deg, transparent, #e15746);
-animation: animate3 1s linear infinite;
-animation-delay: 0.5s;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 1px; 
+    background: linear-gradient(270deg, transparent, #e15746);
+    animation: animate3 2s linear infinite; 
+    animation-delay: 0.75s;
 }
 
 @keyframes animate3 {
-0% { right: -100%; }
-50%, 100% { right: 100%; }
+    0% { right: -100%; }
+    100% { right: 100%; }
 }
 
 button::after, .donate-btn::after, .share-btn::after, .social-media-btn::after {
-content: '';
-position: absolute;
-bottom: -100%;
-left: 0;
-width: 2px;
-height: 100%;
-background: linear-gradient(360deg, transparent,#e15746);
-animation: animate4 2s linear infinite;
-animation-delay: 0.75s;
+    content: '';
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 1px; 
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #e15746);
+    animation: animate4 3s linear infinite; 
+    animation-delay: 1s; 
 }
 
 @keyframes animate4 {
-0% { bottom: -100%; }
-50%, 100% { bottom: 100%; }
+    0% { bottom: -100%; }
+    100% { bottom: 100%; }
 }
-
 
 /* Stijl voor de sticky donatieknop aan de zijkant */
 .sticky-donate-btn {
-position: fixed;
-top: 50%;
-right: 20px;
-transform: translateY(-50%);
-z-index: 1000;
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 1000;
 }
 
 .donate-btn-sticky {
-background-color:#E15746;
-color: white;
-border: none;
-padding: 12px 20px;
-border-radius: 50px;
-cursor: pointer;
-font-size: 1rem;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-transition: background-color 0.3s ease, transform 0.3s ease;
+    background-color:#E15746;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .donate-btn-sticky:hover {
-background-color: #333;
-transform: scale(1.05);
+    background-color: #333;
+    transform: scale(1.05);
 }
-
-
-
 
 
 /* Footer styling */
 .responsive-footer {
-background-color: #141415;
-color: #f5f5f5;
-padding: 40px 20px;
-margin-top: 250px;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
+    background-color: #141415;
+    color: #f5f5f5;
+    padding: 40px 20px;
+    margin-top: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-content {
-display: flex;
-justify-content: space-between;
-width: 100%;
-max-width: 1100px;
-text-align: left;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1100px;
+    text-align: left;
 }
 
 .footer-logo-section {
-flex-basis: 25%;
+    flex-basis: 25%;
 }
 
 .footer-logo {
-width: 100px;
-margin-bottom: 15px;
+    width: 100px;
+    margin-bottom: 15px;
 }
 
 .footer-motto {
-font-size: 0.9rem;
-color: #ccc;
-line-height: 1.5;
+    font-size: 0.9rem;
+    color: #ccc;
+    line-height: 1.5;
 }
 
 .footer-columns {
-display: flex;
-justify-content: space-between;
-flex-basis: 75%;
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 75%;
 }
 
 .footer-column {
-flex-basis: calc(25% - 20px);
+    flex-basis: calc(25% - 20px);
 }
 
 .footer-column h3 {
-font-size: 1rem;
-color: #fff;
-margin-bottom: 10px;
-font-weight: bold;
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .footer-column ul {
-list-style: none;
-padding: 0;
-margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .footer-column ul li {
-margin-bottom: 8px;
+    margin-bottom: 8px;
 }
 
 .footer-column ul li a {
-color: #999;
-text-decoration: none;
-font-size: 0.85rem;
-transition: color 0.3s ease;
+    color: #999;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.3s ease;
 }
 
 .footer-column ul li a:hover {
-color: #E15746;
+    color: #E15746;
 }
 
 /* Social media section */
 .social-links ul {
-list-style: none;
-padding: 0;
-margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .social-links ul li {
-margin-bottom: 8px;
+    margin-bottom: 8px;
 }
 
 .social-links ul li a {
-color: #999;
-text-decoration: none;
-font-size: 0.85rem;
-transition: color 0.3s ease;
+    color: #999;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.3s ease;
 }
 
 .social-links ul li a:hover {
-color: #E15746;
+    color: #E15746;
 }
 /* Stijl voor de footer */
 
 .footer-bottom {
-display: flex; 
-justify-content: center; 
-align-items: center; 
-width: 100%;
-text-align: center;
-border-top: 1px solid #333;
-padding: 15px 0; 
-margin-top: 20px;
-font-size: 0.85rem;
-color: #999;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #333;
+    padding: 15px 0; 
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #999;
 }
 
 
 /* Stijl voor de datum en naam onder de kaart */
 .meta-info {
-font-size: 0.85rem; 
-color: #777; 
-margin-top: 10px; 
-text-align: center;
+    font-size: 0.85rem; 
+    color: #777; 
+    margin-top: 10px; 
+    text-align: center;
 }
 
 
 .imagecard h2 {
-font-size: 15px; 
-font-weight: bold;
-color: #333;
-margin: 15px 0;
-text-align: center;
-padding: 0 20px;
-line-height: 1.5;
-text-transform: uppercase;
-letter-spacing: 1px;
+    font-size: 15px; 
+    font-weight: bold;
+    color: #333;
+    margin: 15px 0;
+    text-align: center;
+    padding: 0 20px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 
-
-
-
-
-
-
 /* profiel pagina style */
-
 .about-section h2 {
-    font-size: 2.2rem;
+    font-size: 2rem; 
     text-align: center;
     margin: 20px 0;
     color: #444;
@@ -1125,47 +1093,28 @@ letter-spacing: 1px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 50px 20px; 
+    padding: 50px 20px;
     background-color: #fff;
-    margin-bottom: 60px; 
+    margin-bottom: 60px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
     overflow: hidden;
 }
 
-.author-img-container {
-    width: 45%;
-    height: auto;
-    position: relative;
-    overflow: hidden;
-    background-color: #162052;
-    background: linear-gradient(135deg, #333, #F59A84, #000, #E15746);
-    background-size: 300% 300%;
-    animation: color-shift 10s ease infinite;
-    margin-bottom: 30px; 
-}
-
-@keyframes color-shift {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
 .author-img {
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    transition: transform 0.4s ease;
+    outline: 150px solid rgba(0, 0, 0, 0.6);
+    outline-offset: -180px;
+    transition: outline 2s cubic-bezier(0.4, 0, 0.2, 1), outline-offset 2s cubic-bezier(0.4, 0, 0.2, 1), transform 2s cubic-bezier(0.4, 0, 0.2, 1), padding 2s;
 }
 
-.author-img:hover {
-    transform: scale(1.1);
+.author-img-container:hover .author-img {
+    outline: 2px solid #E15746;
+    outline-offset: -15px;
+    transform: scale(1.05);
 }
+
 
 /* Social Media Links */
 .about-social-links-container {
@@ -1182,31 +1131,411 @@ letter-spacing: 1px;
     justify-content: center;
 }
 
+.about-social-links li {
+    list-style: none;
+}
+
 .about-social-links li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85px;
+    height: 40px;
+    background-color: #2a2a2a;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
     text-decoration: none;
-    color: #555; 
-    background-color: #f2f2f2; 
-    font-size: 1.4rem;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    padding: 10px 20px;
-    border: 2px solid #ccc;
-    border-radius: 25px;
-    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .about-social-links li a:hover {
-    color: #fff;
-    background-color: #D64938; 
-    border-color: #D64938;
+    background-color: #E15746;
 }
 
-/* Text Section */
+/* Unieke hover-effecten per item */
+.about-social-links li:nth-child(1) a:hover {
+    background-color: #D4694D;
+}
+
+.about-social-links li:nth-child(2) a:hover {
+    background-color: #f21313;
+}
+
+.about-social-links li:nth-child(3) a:hover {
+    background-color: #E15746;
+}
+
+.about-social-links li:nth-child(4) a:hover {
+    background-color: #f32d2d;
+}
+
+/* Tekst Sectie met 3D Effect */
 .text-container {
     max-width: 800px;
-    color: #333; 
+    background: linear-gradient(135deg, #f9f9f9, #e8e8e8);
+    color: #333;
     line-height: 1.8;
-    font-size: 1.2rem;
+    font-size: 1.2rem; 
     margin: 40px auto;
-    padding: 0 20px;
+    padding: 30px;
+    text-align: left;
+    border-radius: 12px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2), -3px -3px 10px rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(183, 21, 64, 0.2);
+}
+
+/* Titel voor de tekst sectie */
+.text-container h2 {
+    font-size: 2rem; 
+    color: #E15746;
+    margin-bottom: 20px;
     text-align: center;
+}
+
+/* Ruimte tussen paragrafen */
+.text-container p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+
+
+/* Skills Section */
+.skills-section {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.skills-title {
+    font-size: 2rem; 
+    margin-bottom: 40px;
+    color: #141415;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Skills Item */
+.skills-item {
+    text-align: center;
+    width: 150px;
+    padding: 20px;
+    transition: transform 0.9s ease;
+}
+
+.skills-item:hover {
+    transform: translateY(5px);
+}
+
+/* Circular Progress Bar */
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #ddd;
+    position: relative;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Voortgangsvulling */
+.circle::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #E15746;
+    position: absolute;
+    clip: rect(0px, 120px, 120px, 60px);
+    transform: rotate(0deg);
+    z-index: 1;
+}
+
+.skills-item:nth-child(1) .circle::before {
+    transform: rotate(324deg); /* 60% van 360 graden is 324 graden */
+}
+
+.skills-item:nth-child(2) .circle::before {
+    transform: rotate(342deg); /* 65% van 360 graden is 342 graden */
+}
+
+.skills-item:nth-child(3) .circle::before {
+    transform: rotate(306deg); /* 55% van 360 graden is 306 graden */
+}
+
+/* Binnenste cirkel met percentage */
+.circle-inner {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.percentage {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Artikelen Sectie */
+.latest-articles-title {
+    text-align: center;
+    font-size: 2rem; 
+    margin-bottom: 20px;
+}
+
+.articles-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.article-item {
+    background-color: #444; 
+    border: 1px solid #E15746;
+    border-radius: 8px;
+    width: 18rem;
+    margin: 20px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.8s ease;
+    overflow: hidden;
+}
+
+.article-item:hover {
+    transform: translateY(5px);
+}
+
+.article-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.article-body {
+    padding: 10px;
+}
+
+.article-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #fff; 
+}
+
+.article-description {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    color: #f0f0f0; 
+}
+
+.btn {
+    display: inline-block;
+    padding: 5px 10px;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.dots {
+    font-weight: bold;
+    font-size: 20px;
+    animation: changeColor 1.5s infinite;
+}
+
+@keyframes changeColor {
+    0% {
+        color: red;
+    }
+    33% {
+        color: #f0f0f0;
+    }
+    66% {
+        color: #e15746;
+    }
+    100% {
+        color: red;
+    }
+}
+
+
+.donate-container {
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    padding: 2rem;
+    max-width: 450px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    margin-top: 40px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+    margin-left: 200px;
+    margin-right: auto; 
+}
+
+
+.donate-container:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.donate {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/assets/donate2.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    padding: 40px 20px;
+    z-index: 1;
+}
+
+.donate::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: -1; 
+}
+
+
+.donate-title {
+    font-size: 1.8rem;
+    color: #3e3c3c;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding-bottom: 0.5rem;
+    text-align: left;
+    border-bottom: 2px solid #E15746;
+}
+
+.donate-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+
+
+.label {
+    font-size: 1rem;
+    color: #333;
+    padding: 0.6rem 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+
+.label:hover {
+    color: rgb(247, 178, 178);
+}
+
+
+.donation-input:focus {
+    box-shadow: 0 0 5px rgba(225, 87, 70, 0.2);
+}
+
+.checkbox {
+    display: flex;
+    align-items: center; 
+    margin-top: 0.5rem; 
+    font-size: 1rem;
+    color: #494848;
+}
+
+.checkbox input[type="checkbox"] {
+    margin-right: 10px; 
+    width: 18px;
+    height: 18px;
+}
+
+.checkbox label {
+    cursor: pointer;
+    margin: 0; 
+}
+
+.input-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #444;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem; 
+    text-align: left;
+}
+
+
+.donation-input {
+    padding: 0.6rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 100%;
+    margin-top: 0.5rem; 
+    background-color: #fff;
+    transition: border 0.3s ease;
+}
+
+
+.submit-btn {
+    background-color: #E15746;
+    color: white;
+    padding: 0.7rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+}
+
+.submit-btn:hover {
+    background-color: #222;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
+#progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background-color: #f0f0f0;
+    z-index: 1000;
+}
+
+#progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: #E15746;
+    transition: width 0.3s ease;
 }

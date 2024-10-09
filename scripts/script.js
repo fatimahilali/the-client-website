@@ -1,135 +1,94 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
+    // MENU FUNCTIONALITEIT
 
-    // Haal de knop op waarmee je het menu opent
-    const menuButton = document.querySelector('.menu-button'); // Selecteer de knop voor het openen van het menu
+    // Pak de elementen voor het menu en de overlay
+    const menuButton = document.querySelector('.menu-button');  // De knop waarmee het menu opent
+    const dropdown = document.querySelector('.dropdown');       // Het menu zelf
+    const overlay = document.getElementById('overlay');         // De donkere achtergrond
+    const closeButton = document.getElementById('close-button');// De knop om het menu te sluiten
 
-    // Haal het uitklapbare menu op
-    const dropdown = document.querySelector('.dropdown'); // Selecteer het uitklapbare menu-element
+    // Als het menu geopend wordt
+    menuButton.addEventListener('click', function () {
+        overlay.classList.add('show');    // Laat de overlay zien
+        dropdown.classList.add('show');   // Laat het menu zien
+    });
 
-    // Haal de donkere achtergrond (overlay) op die verschijnt als het menu open is
-    const overlay = document.getElementById('overlay'); // Selecteer de overlay (donkere achtergrond)
+    // Als het menu gesloten wordt
+    closeButton.addEventListener('click', function () {
+        overlay.classList.remove('show'); // Verberg de overlay
+        dropdown.classList.remove('show');// Verberg het menu
+    });
 
-    // Haal de knop op waarmee je het menu sluit
-    const closeButton = document.getElementById('close-button'); // Selecteer de sluitknop van het menu
-
-    // Controleer of alle onderdelen die we nodig hebben er zijn
-    if (menuButton && dropdown && overlay && closeButton) { // Zorg ervoor dat alle vereiste elementen bestaan
-
-        // Als je op de menu-knop klikt, laat dan het menu en de overlay zien of verberg ze
-        menuButton.addEventListener('click', function() {
-            overlay.classList.toggle('show'); // Laat de overlay zien of verberg hem
-            dropdown.classList.toggle('show'); // Laat het menu zien of verberg het
-        });
-
-        // Als je op de sluitknop in het menu klikt, verberg dan het menu en de overlay
-        closeButton.addEventListener('click', function() {
+    // Als je op de overlay klikt, sluit het menu
+    overlay.addEventListener('click', function (event) {
+        if (event.target === overlay) {   // Controleer of je echt op de overlay klikt
             overlay.classList.remove('show'); // Verberg de overlay
-            dropdown.classList.remove('show'); // Verberg het menu
-        });
+            dropdown.classList.remove('show');// Verberg het menu
+        }
+    });
 
-        // Als je op de overlay (donkere achtergrond) klikt, sluit het menu
-        overlay.addEventListener('click', function(event) {
-            // Controleer of je buiten het menu hebt geklikt
-            if (!dropdown.contains(event.target) && !menuButton.contains(event.target)) {
-                overlay.classList.remove('show'); // Verberg de overlay
-                dropdown.classList.remove('show'); // Verberg het menu
-            }
-        });
-    }
 
-    // Deelknop functionaliteit
-    const shareBtn = document.querySelector('.share-btn'); // Selecteer de deelknop
-    const shareOptions = document.querySelector('.share-options'); // Selecteer de deelopties
+    // DONATIE POP-UP FUNCTIONALITEIT
 
-    // Toggle de zichtbaarheid van de deelopties
-    if (shareBtn && shareOptions) { // Controleer of deelknop en deelopties bestaan
-        shareBtn.addEventListener('click', () => {
-            shareOptions.classList.toggle('active'); // Zet de deelopties aan of uit
-        });
-    }
+    // Pak de elementen voor de donatie pop-up
+    const donationPopup = document.getElementById('donationPopup'); // De donatie-pop-up
+    const closePopup = document.getElementById('closePopup');       // De knop om de pop-up te sluiten
 
-    // Functionaliteit om de link te kopiëren
-    const copyBtn = document.querySelector('.copy-btn'); // Selecteer de kopieerknop
-    const shareLink = document.querySelector('.share-link'); // Selecteer het tekstveld van de te kopiëren link
-
-    if (copyBtn && shareLink) { // Controleer of kopieerknop en link bestaan
-        copyBtn.addEventListener('click', () => {
-            // Kopieer de tekst van de link naar het klembord
-            navigator.clipboard.writeText(shareLink.textContent)
-                .then(() => alert('Link gekopieerd!')) // Toon een melding als het kopiëren gelukt is
-                .catch(err => console.error('Fout bij kopiëren: ', err)); // Toon een foutmelding bij mislukken
-        });
-    }
-
-    // Pop-up donatie functionaliteit
-    const donationPopup = document.getElementById('donationPopup'); // Selecteer de donatiepop-up
-    const closePopup = document.getElementById('closePopup'); // Selecteer de sluitknop van de pop-up
-
-    // Functie om de scrollpositie te controleren en de pop-up te tonen
+    // Functie om de pop-up te tonen als je 50% gescrold hebt
     function checkScrollPosition() {
-        // De totale hoogte van de pagina (document)
-        const scrollHeight = document.documentElement.scrollHeight; // Bereken de totale hoogte van de pagina
-        // De hoogte van het zichtbare gedeelte van het venster
-        const clientHeight = document.documentElement.clientHeight; // Bereken de hoogte van het zichtbare deel
-        // Hoeveel de gebruiker naar beneden heeft gescrold vanaf de bovenkant van de pagina
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop; // Hoe ver de gebruiker gescrold heeft
-        
-        // Bereken hoeveel procent van de pagina de gebruiker heeft gescrold
-        const scrollPercentage = (scrollTop / (scrollHeight - clientHeight)) * 100; // Bereken het scrollpercentage
+        const scrollTop = window.scrollY;               // Hoeveel de gebruiker gescrold heeft
+        const documentHeight = document.documentElement.scrollHeight; // Totale hoogte van de pagina
+        const windowHeight = window.innerHeight;        // Hoogte van het venster
+        const scrollPercentage = (scrollTop / (documentHeight - windowHeight)) * 100; // Bereken het percentage dat is gescrold
 
         // Als de gebruiker meer dan 50% van de pagina heeft gescrold, toon de pop-up
         if (scrollPercentage > 50) {
-            donationPopup.style.display = 'flex';  // Toon de pop-up als er genoeg gescrold is
-            window.removeEventListener('scroll', checkScrollPosition);  // Stop met luisteren naar scroll-events
+            donationPopup.style.display = 'flex'; // Toon de pop-up
+            window.removeEventListener('scroll', checkScrollPosition); // Stop met luisteren naar scroll-events
         }
     }
 
-    // Luister naar het scroll-event om te controleren hoeveel de gebruiker heeft gescrold
-    window.addEventListener('scroll', checkScrollPosition); // Start met luisteren naar de scrollpositie
+    // Controleer de scrollpositie tijdens het scrollen
+    window.addEventListener('scroll', checkScrollPosition);
 
     // Sluit de pop-up als op de sluitknop wordt geklikt
-    if (closePopup) {
-        closePopup.addEventListener('click', function() {
-            donationPopup.style.display = 'none'; // Verberg de pop-up wanneer op sluiten wordt geklikt
-        });
-    }
+    closePopup.addEventListener('click', function () {
+        donationPopup.style.display = 'none'; // Verberg de pop-up
+    });
 
-    // Sticky donatieknop functionaliteit
-    const stickyDonateBtn = document.querySelector('.donate-btn-sticky'); // Selecteer de sticky donatieknop
 
-    // Controleer of de sticky donatieknop bestaat
-    if (stickyDonateBtn) {
-        // Voeg een lichte animatie toe bij scrollen om de aandacht te trekken
-        window.addEventListener('scroll', function() {
-            stickyDonateBtn.style.transform = 'translateY(-50%) scale(1.1)'; // Geef een lichte vergroting bij scrollen
-            setTimeout(() => {
-                stickyDonateBtn.style.transform = 'translateY(-50%) scale(1)'; // Terug naar normale grootte na animatie
-            }, 200);
-        });
-    }
 
-    // Functie voor het bijhouden van het aantal keer dat een artikel is gelezen
-    const articleId = 'article-123'; // Uniek artikel-ID om de weergaven bij te houden
-    const viewCounter = document.getElementById('view-counter'); // Selecteer de weergaveteller
+    // Pak het element voor de weergaveteller
+    const viewCounter = document.getElementById('view-counter'); // De teller die het aantal keer gelezen laat zien
+    const articleId = 'article-123'; // Uniek ID voor het artikel
 
-    // Ophalen van het huidige aantal weergaven uit localStorage
-    let views = localStorage.getItem(articleId); // Haal het aantal weergaven op uit localStorage
-
-    if (views === null) { // Als er nog geen gegevens zijn
-        views = 0; // Zet het aantal weergaven op 0
-    } else {
-        views = parseInt(views, 10); // Zet het aantal weergaven om naar een getal
-    }
-
-    // Verhoog het aantal weergaven
+    // Haal het huidige aantal weergaven uit localStorage
+    let views = localStorage.getItem(articleId) || 0;  // Zet het aantal weergaven op 0 als het niet bestaat
     views++; // Verhoog het aantal weergaven met 1
 
-    // Toon het bijgewerkte aantal weergaven in de view-counter
-    if (viewCounter) {
-        viewCounter.innerText = `${views} keer gelezen`; // Update de view-counter met het aantal weergaven
-    }
+    // Toon het aantal weergaven
+    viewCounter.innerText = views + ' keer gelezen';
 
-    // Sla het nieuwe aantal weergaven op in localStorage
-    localStorage.setItem(articleId, views); // Sla het nieuwe aantal weergaven op in localStorage
+    // Sla het bijgewerkte aantal weergaven op in localStorage
+    localStorage.setItem(articleId, views);
 
+    // VOORTGANGSBALK FUNCTIONALITEIT
+
+    // Pak de voortgangsbalk en het artikel
+    const progressBar = document.getElementById('progress-bar'); // De voortgangsbalk
+    const article = document.querySelector('.article-content');  // Het artikel zelf
+
+    // Functie om de voortgangsbalk bij te werken
+    window.addEventListener('scroll', function () {
+        const articleTop = article.offsetTop; // Afstand van het artikel tot de bovenkant van de pagina
+        const articleHeight = article.scrollHeight; // Hoogte van het artikel
+        const scrollTop = window.scrollY; // Hoe ver de gebruiker heeft gescrold
+        const windowHeight = window.innerHeight; // Hoogte van het venster
+
+        // Bereken hoeveel van het artikel is gelezen
+        const progress = ((scrollTop - articleTop + windowHeight) / articleHeight) * 100;
+
+        // Stel de breedte van de voortgangsbalk in op basis van het percentage
+        progressBar.style.width = Math.min(progress, 100) + '%'; // Zorg ervoor dat het niet meer dan 100% wordt
+    });
 });

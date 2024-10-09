@@ -51,27 +51,27 @@
         <img src="/assets/logo.jpg" alt="Logo" class="logo">
     </section>
 
-    <nav class="secondary-navbar"> 
-        <ul class="secondary-nav-list"> 
-            <li class="secondary-item"><a href="#home">Voorpagina</a></li> 
-            <div class="secondary-separator"></div> 
-            <li class="secondary-item"><a href="#binnenland">Binnenland</a></li> 
-            <div class="secondary-separator"></div> 
-            <li class="secondary-item"><a href="#buitenland">Buitenland</a></li> 
-            <div class="secondary-separator"></div> 
-            <li class="secondary-item"><a href="#columns">Columns</a></li> 
-            <div class="secondary-separator"></div> 
-            <li class="secondary-item"><a href="#economie">Economie</a></li> 
-            <div class="secondary-separator"></div> 
-            <li class="secondary-item"><a href="#kunst-media">Kunst & Media</a></li> 
-            <div class="secondary-separator"></div> 
-            <li class="secondary-item"><a href="#podcasts">Podcasts</a></li> 
-            <div class="secondary-separator"></div> 
-            <li class="secondary-item"><a href="#politiek">Politiek</a></li> 
-            <div class="secondary-separator"></div> 
-            <li class="secondary-item"><a href="#wetenschap">Wetenschap</a></li> 
-        </ul> 
-    </nav> 
+    <nav class="secondary-navbar">
+        <ul class="secondary-nav-list">
+            <li class="secondary-item"><a href="#home">Voorpagina</a></li>
+            <div class="secondary-separator"></div>
+            <li class="secondary-item"><a href="#binnenland">Binnenland</a></li>
+            <div class="secondary-separator"></div>
+            <li class="secondary-item"><a href="#buitenland">Buitenland</a></li>
+            <div class="secondary-separator"></div>
+            <li class="secondary-item"><a href="#columns">Columns</a></li>
+            <div class="secondary-separator"></div>
+            <li class="secondary-item"><a href="#economie">Economie</a></li>
+            <div class="secondary-separator"></div>
+            <li class="secondary-item"><a href="#kunst-media">Kunst & Media</a></li>
+            <div class="secondary-separator"></div>
+            <li class="secondary-item"><a href="#podcasts">Podcasts</a></li>
+            <div class="secondary-separator"></div>
+            <li class="secondary-item"><a href="#politiek">Politiek</a></li>
+            <div class="secondary-separator"></div>
+            <li class="secondary-item"><a href="#wetenschap">Wetenschap</a></li>
+        </ul>
+    </nav>
 
     <main>
 
@@ -85,7 +85,7 @@
 
             </header>
             <img src="/assets/img.jpg" class="card-img" alt="Journalist Image">
-            <span class="view-counter" id="view-counter">0 keer gelezen</span> 
+            <span class="view-counter" id="view-counter">0 keer gelezen</span>
 
             <section class="card-body">
                 <h2 class="subheadline">RedPers • Vandaag, 20:00</h2>
@@ -103,13 +103,14 @@
                     </div>
                     <div class="author-info">
                         <h2 class="author-name">Iris van Boven</h2>
-                        <a href="profile.html" class="profile-link">Bezoek profiel</a> <!-- Verwijst naar profile.html -->
+                        <a href="profile.html" class="profile-link">Bezoek profiel</a>
+                        <!-- Verwijst naar profile.html -->
 
 
                     </div>
                 </section>
 
-                </section>
+            </section>
 
         </article>
     </main>
@@ -251,37 +252,49 @@
     </section>
 
 
-    <!-- Voeg deze sectie ergens in de gewenste locatie van je HTML toe, bijvoorbeeld onder de main sectie -->
-    <section class="share-container">
-        <button class="share-btn" aria-label="Delen">
-            <i class="fas fa-share-alt"></i>
-        </button>
-        <div class="share-options">
-            <p class="share-title">Deel dit artikel</p>
-            <div class="social-media">
-                <button class="social-media-btn" aria-label="Opslaan"><i class="far fa-folder-open"></i></button>
-                <button class="social-media-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></button>
-                <button class="social-media-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></button>
-                <button class="social-media-btn" aria-label="Twitter"><i class="fab fa-twitter"></i></button>
-                <button class="social-media-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></button>
-                <button class="social-media-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></button>
-            </div>
-            <div class="link-container">
-                <p class="share-link">https://https://redpers.nl/share</p>
-                <button class="copy-btn" aria-label="Link kopiëren">Kopieer</button>
-            </div>
+    <div class="share-container">
+        <!-- Tekst voor "Deel dit artikel" -->
+        <p class="share-title">Deel dit artikel</p>
+
+        <!-- Social Media Knoppen -->
+        <div class="social-media-container">
+            <ul class="social-icons">
+                <li>
+                    <a href="#" class="social-icon facebook" data-tip="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="social-icon twitter" data-tip="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="social-icon instagram" data-tip="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="social-icon linkedin" data-tip="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </li>
+            </ul>
         </div>
-    </section>
+    </div>
+
+
+
 
 
     <!-- Sticky Donatieknop aan de Zijkant -->
     <div class="sticky-donate-btn">
-        <button class="donate-btn-sticky">Doneer</button>
+        <a href="donation.html" class="donate-btn-sticky">Doneer</a>
     </div>
 
     <!-- Lees meer artikelen knop buiten de container geplaatst -->
     <div class="read-more-container">
-        <a href="#" class="read-more-btn">Lees Meer </a> <!-- Aangepaste knoptekst -->
+        <a href="#" class="read-more-btn">Lees Meer </a>
     </div>
     <div class="img-container">
         <div class="imagecard">
@@ -293,6 +306,7 @@
             <h2>
                 Verbindend, fris en vol energie:<br> een duik in de opkomst van maté
             </h2>
+            <!-- Datum en naam toevoegen -->
             <p class="meta-info">12 juni 2024 • Iris van Boven</p>
         </div>
 
@@ -305,6 +319,7 @@
             <h2>
                 Energieke start van de dag:<br> de opkomst van smoothie bowls
             </h2>
+            <!-- Datum en naam toevoegen -->
             <p class="meta-info">10 juni 2024 • Mike van der berg </p>
         </div>
 
@@ -317,9 +332,12 @@
             <h2>
                 Traditionele smaken herleven:<br> een reis door Turkse theehuizen
             </h2>
+            <!-- Datum en naam toevoegen -->
             <p class="meta-info">8 juni 2024 • Angela stevens</p>
         </div>
     </div>
+
+
 
 
 
@@ -335,7 +353,6 @@
                 <div class="footer-column">
                     <h3>Rubrieken</h3>
                     <ul>
-                        <!-- <a href="https://redpers.nl/category/rubriek/binnenland/" target="_blank">Binnenland</a> -->
                         <li><a href="#columns">Columns</a></li>
                         <li><a href="#economie">Economie</a></li>
                         <li><a href="#kunst-media">Kunst & Media</a></li>
