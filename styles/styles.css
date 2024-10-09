@@ -1403,7 +1403,7 @@ button::after, .donate-btn::after, .share-btn::after, .social-media-btn::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('assets/donate2.jpg');
+    background-image: url('/the-client-website/assets/logo.jpg');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
