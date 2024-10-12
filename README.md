@@ -68,9 +68,7 @@ De belangrijkste verbeteringen zijn:
 🔗 [Originele pagina](https://redpers.nl/2024/02/20/carriere-maken-als-amsterdamse-polaroidfotograaf-soms-is-het-een-strijd-om-de-nacht/)  
 🔗 [Veranderde versie (mijn project)](https://fatimahilali.github.io/the-client-website/)
 
-🔗 **Links:**
-- [Originele pagina](https://redpers.nl/2024/02/20/carriere-maken-als-amsterdamse-polaroidfotograaf-soms-is-het-een-strijd-om-de-nacht/)
-- [Veranderde versie (mijn project)](https://fatimahilali.github.io/the-client-website/)
+
 
 🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸
 
