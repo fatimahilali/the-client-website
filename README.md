@@ -6,14 +6,14 @@ De instructie van deze leertaak staan in de [INSTRUCTIONS](https://github.com/fd
 
 
 
-## Inhoudsopgave Readme
+## 📑  Inhoudsopgave Readme
 
   * [Beschrijving](#beschrijving)
   * [Kenmerken](#kenmerken)
   * [Bronnen](#bronnen)
   * [Licentie](#licentie)
 
-## Beschrijving
+## ✨ Beschrijving
 Dit project geeft de Redpers-website een fris en modern ontwerp. De belangrijkste verbeteringen zijn gericht op het verbeteren van de navigatie, het toevoegen van interactieve elementen en het toepassen van nieuwe kleuren en animaties.
 
 Navigatie: Een dropdown-menu met een overlay voor betere toegankelijkheid.
@@ -23,10 +23,10 @@ View-counter: Houdt bij hoe vaak een artikel is gelezen en slaat dit op in local
 Animaties: Levendige animaties voor een dynamischere gebruikerservaring, zoals hover-effecten en bewegende iconen.
 Kleuren: Er is een breder kleurenpalet toegepast om de pagina’s visueel aantrekkelijker te maken.
 
-## Kenmerken
+## 🚀 Kenmerken
 HTML:
 
-Semantische HTML-elementen zoals <header>, <section>, en <footer> om een duidelijke structuur te behouden.
+Semantische HTML-elementen zoals header, section, en footer om een duidelijke structuur te behouden.
 Toevoeging van aria-attributen om de toegankelijkheid te verbeteren.
 
 CSS:
@@ -44,37 +44,54 @@ View-counter met localStorage om te onthouden hoeveel keer een artikel is geleze
 
 
 
-## Bronnen
+## 📚 Bronnen
 - [Carrière maken als Amsterdamse polaroidfotograaf: ‘Soms is het een strijd om de nacht’](https://redpers.nl/2024/02/20/carriere-maken-als-amsterdamse-polaroidfotograaf-soms-is-het-een-strijd-om-de-nacht/)
 
 
 Voorbeelden van de oude versie van de website
 Hieronder zie je screenshots van hoe de Redpers-website eruitzag vóór de aanpassingen:
 
-Oude Navigatie
-De oude navigatie zonder verbeteringen zoals de overlay en dropdown-functionaliteit.
-![Oude navigatie](assets/old-navigation.png)
+## ❥Oude Navigatie
+De oude navigatie had geen verbeteringen zoals de overlay en dropdown-functionaliteit.
 
+<p align="center">
+  <img src="assets/old-navigation.png" alt="Oude navigatie" width="600">
+</p>
 
-Oude Footer
-De oude footer met een eenvoudiger kleurenschema en minder visuele elementen.
+---
 
-![Oude Footer](assets/old-footer.png)
+## ❥ Oude Footer
+De oude footer had een eenvoudiger kleurenschema en minder visuele elementen.
 
-Oude Donatiepagina
-De oude donatie-sectie stond in de artikelpagina en had geen automatische pop-up bij scrollen.
-![Oude donatie section](assets/old-donation.png)
+<p align="center">
+  <img src="assets/old-footer.png" alt="Oude Footer" width="600">
+</p>
 
+---
 
+## ❥ Oude Donatiepagina
+De oude donatiesectie stond in de artikelpagina en had geen automatische pop-up bij scrollen.
+
+<p align="center">
+  <img src="assets/old-donation.png" alt="Oude donatie section" width="600">
+</p>
+
+---
+
+## ❥ Oude Auteurspagina
 De oude auteurspagina stond direct in de artikelpagina en had minder structuur, zonder een doorverwijsknop naar een aparte pagina voor de auteur.
-![Oude autor section ](assets/old-author.png)
+
+<p align="center">
+  <img src="assets/old-author.png" alt="Oude auteur section" width="600">
+</p>
 
 
 
 
 
 
-## Licentie
+
+## ⚖️ Licentie
 
 This project is licensed under the terms of the [MIT license](./LICENSE).
 
