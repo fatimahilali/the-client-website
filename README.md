@@ -45,19 +45,17 @@ De belangrijkste verbeteringen zijn:
 | **JavaScript** | Functionaliteit voor dropdown-menu en donatie pop-up na 50% scrollen. Voortgangsbalk voor artikel leesvoortgang. |
 
 ---
+## 📸 Screenshots van de oude versie
 
-## 🔗 Bekijk de verschillen
-
-| Originele Pagina | Veranderde Versie (mijn project) |
-|------------------|----------------------------------|
-| ![Oude Navigatie](assets/old-navigation.png) | ![Nieuwe Navigatie](assets/new-navigation.png) |
-| ![Oude Footer](assets/old-footer.png) | ![Nieuwe Footer](assets/new-footer.png) |
+| Originele Pagina |
+|------------------|
+| ![Oude Navigatie](assets/old-navigation.png) |
+| ![Oude Footer](assets/old-footer.png) |
 
 🔗 **Links:**
 - [Originele pagina](https://redpers.nl/2024/02/20/carriere-maken-als-amsterdamse-polaroidfotograaf-soms-is-het-een-strijd-om-de-nacht/)
 - [Veranderde versie (mijn project)](https://fatimahilali.github.io/the-client-website/)
 
----
 
 ## 🎯 Leerdoelen
 
