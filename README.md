@@ -1,8 +1,13 @@
-# The Client - Website
+# The Client - Website 🌐
+
+![HTML5](https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=fff)
+![CSS3](https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=fff)
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=fff)
+
 
 Ontwerp en maak een website voor een opdrachtgever en bespreek het resultaat tijdens de Sprint Review.
 
-De instructie van deze leertaak staan in de [INSTRUCTIONS](https://github.com/fdnd-task/the-client-website/blob/main/docs/INSTRUCTIONS.md)
+📋 De instructie van deze leertaak staan in de [INSTRUCTIONS](https://github.com/fdnd-task/the-client-website/blob/main/docs/INSTRUCTIONS.md)
 
 
 
@@ -14,34 +19,33 @@ De instructie van deze leertaak staan in de [INSTRUCTIONS](https://github.com/fd
   * [Licentie](#licentie)
 
 ## ✨ Beschrijving
-Dit project geeft de Redpers-website een fris en modern ontwerp. De belangrijkste verbeteringen zijn gericht op het verbeteren van de navigatie, het toevoegen van interactieve elementen en het toepassen van nieuwe kleuren en animaties.
+Dit project geeft de Redpers-website een fris en modern ontwerp. De belangrijkste verbeteringen zijn:
 
-Navigatie: Een dropdown-menu met een overlay voor betere toegankelijkheid.
-Donatie Pop-up: Verschijnt automatisch wanneer je meer dan 50% van de pagina hebt gescrold.
-Leesvoortgang: Een voortgangsbalk laat zien hoeveel van het artikel je hebt gelezen.
-View-counter: Houdt bij hoe vaak een artikel is gelezen en slaat dit op in localStorage.
-Animaties: Levendige animaties voor een dynamischere gebruikerservaring, zoals hover-effecten en bewegende iconen.
-Kleuren: Er is een breder kleurenpalet toegepast om de pagina’s visueel aantrekkelijker te maken.
+- 🎨 **Navigatie**: Dropdown-menu met overlay voor betere toegankelijkheid.
+- 💬 **Donatie Pop-up**: Verschijnt automatisch na 50% scrollen.
+- 📊 **Leesvoortgang**: Een voortgangsbalk toont hoeveel van het artikel gelezen is.
+- 📈 **View-counter**: Houdt bij hoe vaak een artikel is gelezen en slaat dit op met localStorage.
+- ✨ **Animaties**: Hover-effecten en bewegende iconen voor dynamische gebruikerservaring.
+- 🎨 **Kleuren**: Breder kleurenpalet voor een visueel aantrekkelijkere website.
+
 
 ## 🚀 Kenmerken
-HTML:
 
-Semantische HTML-elementen zoals header, section, en footer om een duidelijke structuur te behouden.
-Toevoeging van aria-attributen om de toegankelijkheid te verbeteren.
+| Technologie  | Kenmerk                                                                 |
+|--------------|-------------------------------------------------------------------------|
+| **HTML**     | Semantische elementen zoals `<header>`, `<section>`, `<footer>`.         |
+|              | Toegankelijkheid verbeterd met aria-attributen.                         |
+| **CSS**      | Flexbox voor lay-out.                                                   |
+|              | Animaties en transitions voor visuele feedback (hover-effecten, etc.).  |
+| **JavaScript** | Functionaliteit voor dropdown-menu en donatie pop-up na 50% scrollen. |
+|              | Voortgangsbalk voor artikel leesvoortgang.                              |
 
-CSS:
 
-Gebruik van Flexbox voor lay-out.
-Animaties en transitions voor hover-effecten en visuele feedback (bijv. menu-transformaties, donatieknop).
-Een modern en fris kleurenschema met goed leesbare typografie.
 
-JavaScript:
+## 🔗 Bekijk de verschillen
 
-Menu-functionaliteit (openen en sluiten van het dropdown-menu).
-Donatie-pop-up die automatisch verschijnt na 50% scrollen.
-Voortgangsbalk die de leesvoortgang van een artikel toont.
-View-counter met localStorage om te onthouden hoeveel keer een artikel is gelezen.
-
+- [**Originele pagina**](https://redpers.nl/2024/02/20/carriere-maken-als-amsterdamse-polaroidfotograaf-soms-is-het-een-strijd-om-de-nacht/)
+- [**Veranderde versie (mijn project)**](https://fatimahilali.github.io/the-client-website/)
 
 
 ## 📚 Bronnen
@@ -85,6 +89,15 @@ De oude auteurspagina stond direct in de artikelpagina en had minder structuur, 
   <img src="assets/old-author.png" alt="Oude auteur section" width="600">
 </p>
 
+
+
+## 🎯 Leerdoelen
+
+- ![HTML](https://img.shields.io/badge/-HTML5-blue?logo=html5&logoColor=fff) Diepgaande kennis over semantische HTML en toegankelijkheid.
+- ![CSS](https://img.shields.io/badge/-CSS3-yellow?logo=css3&logoColor=fff) Verbeterde kennis van Flexbox voor responsieve lay-outs.
+- ![JavaScript](https://img.shields.io/badge/-JavaScript-green?logo=javascript&logoColor=fff) JavaScript toegepast voor dynamische functies zoals view-counters en voortgangsbalken.
+
+---
 
 
 
