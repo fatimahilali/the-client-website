@@ -56,6 +56,18 @@ De belangrijkste verbeteringen zijn:
 ### Originele Auteurspagina
 | ![Originele Auteurspagina](assets/old-author.png) |
 
+## 🔗 Bekijk de veranderingen
+
+## 🔗 Bekijk de veranderingen
+- Het navigatiemenu is verbeterd met een dropdown en overlay-functionaliteit voor betere toegankelijkheid.
+- Er is een leesvoortgangsbalk toegevoegd, zodat gebruikers kunnen zien hoe vaak het artikel is gelezen.
+- Een donatie pop-up verschijnt automatisch bij 50% scrollen, om gebruikers te stimuleren te doneren.
+- Animaties en een vernieuwd kleurenschema maken de pagina visueel aantrekkelijker en interactiever.
+- De pagina is nu ongeveer 70% responsive, met verdere verbeteringen gepland voor volledige responsiviteit.
+
+🔗 [Originele pagina](https://redpers.nl/2024/02/20/carriere-maken-als-amsterdamse-polaroidfotograaf-soms-is-het-een-strijd-om-de-nacht/)  
+🔗 [Veranderde versie (mijn project)](https://fatimahilali.github.io/the-client-website/)
+
 🔗 **Links:**
 - [Originele pagina](https://redpers.nl/2024/02/20/carriere-maken-als-amsterdamse-polaroidfotograaf-soms-is-het-een-strijd-om-de-nacht/)
 - [Veranderde versie (mijn project)](https://fatimahilali.github.io/the-client-website/)
